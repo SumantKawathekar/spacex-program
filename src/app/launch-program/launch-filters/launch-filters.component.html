@@ -54,7 +54,7 @@
 
       <!-- Program -->
       <div class="rht-sidebar">
-          <div class="program-grid">
+          <div class="program-grid" *ngIf="filteredResult && filteredResult.length >0; else noDataTemplate">
               <!-- Program Card -->
               <div class="column">
                   <div class="program-card" *ngFor="let launchDetail of filteredResult">
@@ -73,7 +73,7 @@
                               <label>Successful Launch: </label> {{launchDetail.launch_success}}
                           </li>
                           <li>
-                              <label>Successful Landing: </label> {{launchDetail.launch_success}}
+                              <label>Successful Landing: </label> {{launchDetail.rocket.first_stage.cores[0].land_success}}
                           </li>
                       </ul>
                   </div>
@@ -81,6 +81,11 @@
               <!--/ Program Card -->
 
           </div>
+          <ng-template #noDataTemplate>
+            <div class="no-data">
+              <p>No Data Found</p>
+            </div>
+          </ng-template>
       </div>
       <!--/ Program -->
   </div>

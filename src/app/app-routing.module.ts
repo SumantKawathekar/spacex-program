@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [{
-  path: 'launch-program',
+  path: '',
   loadChildren: () => import('./launch-program/launch-program.module').then(m => m.LaunchProgramModule)
 }
 ];

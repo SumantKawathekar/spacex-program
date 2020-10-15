@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { ThemePalette } from '@angular/material/core';
+import { ProgressSpinnerMode} from '@angular/material/progress-spinner';
 import { LaunchProgramService } from '../launch-program.service';
 
 @Component({
@@ -8,6 +10,9 @@ import { LaunchProgramService } from '../launch-program.service';
   styleUrls: ['./launch-filters.component.scss']
 })
 export class LaunchFiltersComponent implements OnInit {
+  color: ThemePalette = 'primary';
+  mode: ProgressSpinnerMode = 'indeterminate';
+  value = 50;
   public filteredValues: any
   public years = [
     '2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020'
@@ -19,8 +24,6 @@ export class LaunchFiltersComponent implements OnInit {
   public selectedIndex: number;
   public selectedLaunchIndex:number;
   public selectedLandIndex:number;
-  private selectedYear: number;
-  private launchStatus: any
   public yearVal: any
   constructor(private readonly launchService: LaunchProgramService, private readonly fb: FormBuilder) { }
 
