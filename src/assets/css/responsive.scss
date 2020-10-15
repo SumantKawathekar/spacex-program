@@ -1,0 +1,49 @@
+/* Container Elements
+***********************************************************/
+
+@media(min-width:701px) and (max-width:1024px) {
+    .lft-sidebar {
+        width: 30%;
+    }
+    .rht-sidebar {
+        width: 70%;
+    }
+}
+
+@media (max-width:700px) {
+    .page-container {
+        flex-direction: column;
+    }
+    .lft-sidebar {
+        width: 100%;
+    }
+    .rht-sidebar {
+        width: 100%;
+        padding: 2.5rem 0 0;
+    }
+}
+
+
+/* Right Sidebar Elements
+***********************************************************/
+
+@media(min-width:701px) and (max-width:1024px) {
+    .program-grid .column {
+        width: 50%;
+    }
+}
+
+@media (max-width:700px) {
+    .program-grid .column {
+        width: 100%;
+    }
+    .filter-box ul {
+        justify-content: center;
+    }
+    .filter-box ul li {
+        width: auto;
+    }
+    .filter-box ul li button {
+        width: 10rem;
+    }
+}
