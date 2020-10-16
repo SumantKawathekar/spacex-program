@@ -31,7 +31,7 @@ export class LaunchFiltersComponent implements OnInit {
     this.initiateForm()
     this.launchService.getAllLaunchData()
     .subscribe(res => {
-      this.filteredValues = res;
+      this.filteredResult = res;
     })
 
   }

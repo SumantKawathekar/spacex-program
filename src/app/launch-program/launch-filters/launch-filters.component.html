@@ -10,7 +10,6 @@
               <h4>Launch Year</h4>
               <ul>
                   <li [class.active]="selectedIndex == i" *ngFor="let year of years; let i=index">
-                    <!-- <button value="{{year}}" (click)="selectedIndex = i" (click)="filterOnYear(year, i)">{{year}}</button> -->
                     <mat-button-toggle-group name="fontStyle" aria-label="Font Style" formControlName="year" > 
                       <mat-button-toggle value="{{year}}" (click)="selectedIndex = i" (click)="filterOnAllParams()" >{{year}}</mat-button-toggle>
                     </mat-button-toggle-group>
@@ -24,8 +23,6 @@
               <h4>Successful Launch</h4>
               <ul>
                   <li [class.active]="selectedLaunchIndex == j" *ngFor="let launch of launchSuccessArr; let j=index">
-                    <!-- <button value="{{launch}}" (click)="selectedLaunchIndex = j" (click)="filterOnLaunch(launch, j)">{{launch}}</button></li> -->
-
                     <mat-button-toggle-group formControlName="launchSuceess" > 
                       <mat-button-toggle value="{{launch}}" (click)="selectedLaunchIndex = j" (click)="filterOnAllParams()" >{{launch}}</mat-button-toggle>
                     </mat-button-toggle-group>
@@ -39,8 +36,6 @@
               <h4>Successful Landing</h4>
               <ul>
                 <li [class.active]="selectedLandIndex == j" *ngFor="let land of landSuccessArr; let j=index">
-                  <!-- <button value="{{land}}" (click)="selectedLandIndex = j" (click)="filteOnLand(land, j)">{{land}}</button></li> -->
-
                   <mat-button-toggle-group formControlName="landSuceess" > 
                     <mat-button-toggle value="{{land}}" (click)="selectedLandIndex = j" (click)="filterOnAllParams()" >{{land}}</mat-button-toggle>
                   </mat-button-toggle-group>
@@ -56,10 +51,10 @@
       <div class="rht-sidebar">
           <div class="program-grid" *ngIf="filteredResult && filteredResult.length >0; else noDataTemplate">
               <!-- Program Card -->
-              <div class="column">
-                  <div class="program-card" *ngFor="let launchDetail of filteredResult">
+              <div class="column" *ngFor="let launchDetail of filteredResult">
+                  <div class="program-card" >
                       <div class="image-box">
-                        <img src="{{launchDetail.links.mission_patch_small}}">
+                        <img src="{{launchDetail.links.mission_patch_small}}" alt="Program Image">
                       </div>
                       <h3>FalconSat #1</h3>
                       <ul>

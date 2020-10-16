@@ -136,11 +136,14 @@ body {
 .program-card .image-box {
     width: 100%;
     height: 30rem;
-    background-color: #f2f2f2;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background: #f2f2f2;
     margin-bottom: 1.5rem;
+}
+
+.program-card .image-box img {
+    width: auto;
+    height: 100%;
+    display: block;
 }
 
 .program-card h3 {
