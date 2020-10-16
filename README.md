@@ -1,6 +1,9 @@
 # SpacexLauncher
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6 and angular universal (Server Side Rendering) with express engine.
+
+# Package Installation
+Go to root of the project and run `npm install` to install all the dependencies which project needs
 
 ## Development server
 
@@ -12,7 +15,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run build:ssr` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
