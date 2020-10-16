@@ -108,10 +108,16 @@ html {
                     }
                 }
                 &.active {
-                    button {
-                        background: #7cba01;
-                        color: #000;
+                    .mat-button-toggle-group {
+                        .mat-button-toggle {
+                            button{
+                                background: #7cba01;
+                                color: #000;
+                            }
+                        }
                     }
+                    
+                       
                 }
             }
         }
